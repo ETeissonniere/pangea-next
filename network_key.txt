@@ -1,0 +1,5 @@
+{
+  "caps": {
+    "shs": "7x0Mndy2LJl+gSvWm1QobTZo64jwpP6YuWo3IxbNzGA="
+  }
+}
