@@ -1,0 +1,33 @@
+{
+  "name": "pangea-next",
+  "version": "0.1.0",
+  "description": "The new version of BITNATION's Pangea",
+  "main": "pangea_serve.js",
+  "dependencies": {
+    "scuttlebot": "^9.5.0",
+    "secure-scuttlebutt": "^15.5.2",
+    "ssb-keys": "^7.0.6",
+    "ssb-config": "^2.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DeveloppSoft/pangea-next.git"
+  },
+  "keywords": [
+    "pangea",
+    "bitnation",
+    "blockchain",
+    "ssb",
+    "scuttlebot"
+  ],
+  "author": "Eliott Teissonniere",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/DeveloppSoft/pangea-next/issues"
+  },
+  "homepage": "https://github.com/DeveloppSoft/pangea-next#readme"
+}
