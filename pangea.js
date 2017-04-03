@@ -21,7 +21,7 @@ if(keys.curve === 'k256')
 
 var manifestFile = path.join(config.path, 'manifest.json')
 
-if (argv[0] == 'start') {
+if (argv[0] == 'server') {
   var createSbot = require('scuttlebot')
     .use(require('scuttlebot/plugins/plugins'))
     .use(require('scuttlebot/plugins/master'))
