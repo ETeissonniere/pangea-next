@@ -11,7 +11,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo "Not implemented",
+    "test": "echo 'Not implemented' && exit 5",
     "server": "node pangea.js server"
   },
   "repository": {
