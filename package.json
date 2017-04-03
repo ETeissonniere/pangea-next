@@ -2,7 +2,7 @@
   "name": "pangea-next",
   "version": "0.1.0",
   "description": "The new version of BITNATION's Pangea",
-  "main": "pangea_serve.js",
+  "main": "pangea.js",
   "dependencies": {
     "scuttlebot": "^9.5.0",
     "secure-scuttlebutt": "^15.5.2",
@@ -12,7 +12,7 @@
   "devDependencies": {},
   "scripts": {
     "test": "echo "Not implemented",
-    "server": "node pangea_serve.js server"
+    "server": "node pangea.js server"
   },
   "repository": {
     "type": "git",
