@@ -23,6 +23,7 @@ argv = ~i ? argv.slice(0, i) : argv
 var appname = process.env.appname || 'pangea'
 
 var config = require('ssb-config/inject')(appname, minimist(conf))
+config.caps.shs = '7x0Mndy2LJl+gSvWm1QobTZo64jwpP6YuWo3IxbNzGA='
 
 var keys = ssbKeys.loadOrCreateSync(path.join(config.path, 'secret'))
 if(keys.curve === 'k256')
