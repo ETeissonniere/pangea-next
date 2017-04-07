@@ -20,7 +20,9 @@ var i = argv.indexOf('--')
 var conf = argv.slice(i+1)
 argv = ~i ? argv.slice(0, i) : argv
 
-var config = require('ssb-config/inject')(process.env.ssb_appname, minimist(conf))
+var appname = proces.env.appname || 'pangea'
+
+var config = require('ssb-config/inject')(appname, minimist(conf))
 
 var keys = ssbKeys.loadOrCreateSync(path.join(config.path, 'secret'))
 if(keys.curve === 'k256')
