@@ -11,7 +11,7 @@ var stringify    = require('pull-stringify')
 var createHash   = require('multiblob/util').createHash
 var minimist     = require('minimist')
 var muxrpcli     = require('muxrpcli')
-var cmdAliases   = require('./lib/cli-cmd-aliases')
+var cmdAliases   = require('scuttlebot/lib/cli-cmd-aliases')
 
 //get config as cli options after --, options before that are
 //options to the command.
@@ -20,7 +20,7 @@ var i = argv.indexOf('--')
 var conf = argv.slice(i+1)
 argv = ~i ? argv.slice(0, i) : argv
 
-var appname = proces.env.appname || 'pangea'
+var appname = process.env.appname || 'pangea'
 
 var config = require('ssb-config/inject')(appname, minimist(conf))
 
@@ -36,21 +36,18 @@ if (argv[0] == 'server') {
   // special server command:
   // import sbot and start the server
 
-  var createSbot = require('./')
-    .use(require('./plugins/plugins'))
-    .use(require('./plugins/master'))
-    .use(require('./plugins/gossip'))
-    .use(require('./plugins/friends'))
-    .use(require('./plugins/replicate'))
+  var createSbot = require('scuttlebot')
+    .use(require('scuttlebot/plugins/plugins'))
+    .use(require('scuttlebot/plugins/master'))
+    .use(require('scuttlebot/plugins/gossip'))
+    .use(require('scuttlebot/plugins/friends'))
+    .use(require('scuttlebot/plugins/replicate'))
     .use(require('ssb-blobs'))
-    .use(require('./plugins/invite'))
-    .use(require('./plugins/block'))
-    .use(require('./plugins/local'))
-    .use(require('./plugins/logging'))
-    .use(require('./plugins/private'))
-
-  // add third-party plugins
-  require('./plugins/plugins').loadUserPlugins(createSbot, config)
+    .use(require('scuttlebot/plugins/invite'))
+    .use(require('scuttlebot/plugins/block'))
+    .use(require('scuttlebot/plugins/local'))
+    .use(require('scuttlebot/plugins/logging'))
+    .use(require('scuttlebot/plugins/private'))
 
   // start server
 
@@ -144,9 +141,3 @@ if (argv[0] == 'server') {
     muxrpcli(argv, manifest, rpc, config.verbose)
   })
 }
-
-
-
-
-
-
