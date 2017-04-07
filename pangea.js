@@ -46,5 +46,5 @@ if (argv[0] == 'server') {
   // Text presenting pangea?
   // Print help :)
   console.log('Usage:')
-  console.log('  start: start the server')
+  console.log('  server: start the server')
 }
